@@ -53,7 +53,7 @@ public class Calc {
     }
 
     private static String stripOuterBrackets(String exp) {
-        if(exp.charAt(0) == '(' && exp.charAt(exp.length()-1) == ')'){
+        while(exp.charAt(0) == '(' && exp.charAt(exp.length()-1) == ')'){
             exp = exp.substring(1, exp.length()-1);
         }
         return exp;
